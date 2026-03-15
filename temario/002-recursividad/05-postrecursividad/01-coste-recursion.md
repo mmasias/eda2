@@ -113,6 +113,8 @@ fabricar([1,2,3])
 
 ### La relación general
 
+A partir de la fórmula general de nodos totales es la serie geométrica $\sum_{i=0}^{n} k^i = \frac{k^{n+1} - 1}{k - 1}$ podemos calcular un coste para los nodos totales máximos, a una profundidad n y con un número de ramas concreto tenemos:
+
 <div align=center>
 
 |Ramificación|Profundidad|Nodos totales|Coste|
@@ -122,8 +124,6 @@ fabricar([1,2,3])
 |k|n|$\frac{k^{n+1} - 1}{k - 1}$|O($k^n$)|
 
 </div>
-
-> NOTA: La fórmula general de nodos totales es la serie geométrica $\sum_{i=0}^{n} k^i = \frac{k^{n+1} - 1}{k - 1}$
 
 Pasar de 1 a 2 llamadas por nodo transforma un algoritmo lineal en uno exponencial. La ramificación domina el coste.
 
