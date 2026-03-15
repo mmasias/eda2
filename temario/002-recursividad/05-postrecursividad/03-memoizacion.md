@@ -32,8 +32,12 @@ El nombre viene del latín *memorandum* — algo que debe recordarse. No es un e
 
 ```java
 static long fib(int n, long[] cache) {
-    if (n <= 1) return n;
-    if (cache[n] != -1) return cache[n];
+    if (n <= 1) {
+        return n;
+    }
+    if (cache[n] != -1) {
+        return cache[n];
+    }
     cache[n] = fib(n - 1, cache) + fib(n - 2, cache);
     return cache[n];
 }
@@ -105,7 +109,9 @@ La programación dinámica construye la solución en sentido contrario: parte de
 
 ```java
 static long fibDP(int n) {
-    if (n <= 1) return n;
+    if (n <= 1) {
+        return n;
+    }
     long[] dp = new long[n + 1];
     dp[0] = 0;
     dp[1] = 1;
@@ -116,7 +122,7 @@ static long fibDP(int n) {
 }
 ```
 
-Mismo resultado, mismo coste O(n), sin recursión. La programación dinámica es su propio capítulo.
+Mismo resultado, mismo coste O(n), sin recursión.
 
 ## *#2Think*
 

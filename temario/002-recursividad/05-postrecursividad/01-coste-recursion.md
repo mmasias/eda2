@@ -43,7 +43,9 @@ El coste de un árbol de llamadas depende de dos dimensiones:
 
 ```java
 static int factorial(int n) {
-    if (n == 0) return 1;
+    if (n == 0) {
+        return 1;
+    }
     return n * factorial(n - 1);
 }
 ```
@@ -85,18 +87,18 @@ Cada llamada genera **dos** llamadas recursivas. El árbol se duplica en cada ni
 
 ```
 fabricar([1,2,3])
-├── fabricar([2,3])           ← con 1
-│   ├── fabricar([3])         ← con 1,2
+├── fabricar([2,3])                 ← con 1
+│   ├── fabricar([3])               ← con 1,2
 │   │   ├── fabricar([]) → [1,2,3]
 │   │   └── fabricar([]) → [1,2]
-│   └── fabricar([3])         ← con 1
+│   └── fabricar([3])               ← con 1
 │       ├── fabricar([]) → [1,3]
 │       └── fabricar([]) → [1]
-└── fabricar([2,3])           ← sin 1
-    ├── fabricar([3])         ← con 2
+└── fabricar([2,3])                 ← sin 1
+    ├── fabricar([3])               ← con 2
     │   ├── fabricar([]) → [2,3]
     │   └── fabricar([]) → [2]
-    └── fabricar([3])         ← sin 2
+    └── fabricar([3])               ← sin 2
         ├── fabricar([]) → [3]
         └── fabricar([]) → []
 ```
