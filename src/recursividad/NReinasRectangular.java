@@ -70,13 +70,13 @@ public class NReinasRectangular {
     }
 
     static void  todasLasSoluciones(int[][] tablero, int[] reinasEnTablero, int maximoDeReinas) {
-        if (reinasEnTablero[0] == maximoDeReinas) {
-            mostrar(tablero);
-            return;
-        }
         for (int fila = 0; fila < tablero.length; fila++) {
             for(int columna = 0; columna < tablero[0].length; columna++){
-                if (columna == tablero[0].length) {
+                if (reinasEnTablero[0] == maximoDeReinas) {
+                    mostrar(tablero);
+                    return;
+                }
+                if (columna == tablero[0].length || fila == tablero.length) {
                     mostrar(tablero);
                     return;
                 }
@@ -95,7 +95,7 @@ public class NReinasRectangular {
         final String EXITO     = "-->";
         final String FALLO     = " x ";
         final String RETROCESO = "<--";
-        if (columna == tablero.length) {
+        if (columna == tablero[0].length) {
             return true;
         }
         if (reinasEnTablero[0] == maximoDeReinas){
@@ -144,14 +144,15 @@ public class NReinasRectangular {
     }
 
     public static void main(String[] args) {
-        int[] conteoDeReinas = {0};
         boolean continuar = true;
         Scanner scanner = new Scanner(System.in);
         do {
+            int[] conteoDeReinas = {0};
+
             System.out.print("¿Cuántas reinas?: ");
             int numeroReinas = scanner.nextInt();
             
-            System.out.print("¿Cuanto deseas que sea el factor de crecimiento, no puede ser mayor al numero de reinas?: ");
+            System.out.print("¿Cuanto deseas que sea el factor de crecimiento, no recomendamos un numero muy grande: ");
             int factorDeCrecimiento = scanner.nextInt();
             int alto, ancho;
 
