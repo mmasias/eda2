@@ -154,33 +154,33 @@ public class NReinasRectangular {
             
             System.out.print("¿Cuanto deseas que sea el factor de crecimiento, no recomendamos un numero muy grande: ");
             int factorDeCrecimiento = scanner.nextInt();
-            int alto, ancho;
+            int fila, columna;
 
             if (Math.random() > 0.5){
-                alto = numeroReinas + factorDeCrecimiento;
-                ancho = numeroReinas;
+                fila = numeroReinas + factorDeCrecimiento;
+                columna = numeroReinas;
             }else{
-                ancho = numeroReinas + factorDeCrecimiento;
-                alto = numeroReinas;
+                columna = numeroReinas + factorDeCrecimiento;
+                fila = numeroReinas;
             }
 
             System.out.print("¿Qué mostrar?: 1: Una solución / 2: Todas / 3: Una con visualización / 4: Salir ");
             switch (scanner.nextInt()) {
                 case 1 -> {
                     System.out.println("Una solución (" + numeroReinas + " reinas):");
-                    int[][] tablero = new int[alto][ancho];
+                    int[][] tablero = new int[fila][columna];
                     if (unaSolucion(tablero, 0, conteoDeReinas, numeroReinas)) {
                         mostrar(tablero);
                     }
                 }
                 case 2 -> {
                     System.out.println("Todas las soluciones (" + numeroReinas + " reinas):");
-                    int[][] tablero2 = new int[alto][ancho];
+                    int[][] tablero2 = new int[fila][columna];
                     todasLasSoluciones(tablero2, conteoDeReinas, numeroReinas);
                 }
                 case 3 -> {
                     System.out.println("Una solución con visualización (" + numeroReinas + " reinas):");
-                    int[][] tablero3 = new int[alto][ancho];
+                    int[][] tablero3 = new int[fila][columna];
                     unaSolucionConVisualizacion(tablero3, 0, conteoDeReinas, numeroReinas);
                 }
                 case 4 -> continuar = false;
