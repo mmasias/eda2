@@ -1,7 +1,7 @@
 <div align=right>
 
-<sub>[RECURSIVIDAD](/temario/002-recursividad/README.md)  
-[Inducción](/temario/002-recursividad/01-induccion/prePatrones.md) / [Estructuración](/temario/002-recursividad/02-estructuracion/README.md) / [Implementación](/temario/002-recursividad/03-implementacion/README.md) / [Aplicación](/temario/002-recursividad/04-aplicacion/README.md) / [**PostRecursividad**](/temario/002-recursividad/05-postrecursividad/README.md)</sub>  
+<sub>[RECURSIVIDAD](/temario/002-recursividad/README.md)
+[Inducción](/temario/002-recursividad/01-induccion/prePatrones.md) / [Estructuración](/temario/002-recursividad/02-estructuracion/README.md) / [Implementación](/temario/002-recursividad/03-implementacion/README.md) / [Aplicación](/temario/002-recursividad/04-aplicacion/README.md) / [**PostRecursividad**](/temario/002-recursividad/05-postrecursividad/README.md)</sub>
 [Inicio](README.md) / [Coste](01-coste-recursion.md) / [Fibonacci](02-fibonacci.md) / [**Memoización**](03-memoizacion.md)
 
 </div>
@@ -62,9 +62,9 @@ fib(5)
         └── fib(2)
             ├── fib(1) → 1
             └── fib(0) → 0
-        ← fib(1) → cache hit
-    ← fib(2) → cache hit
-← fib(3) → cache hit
+        fib(1) → caché                ← no se recalcula
+    fib(2) → caché                    ← no se recalcula
+fib(3) → caché                        ← no se recalcula
 ```
 
 Cada subproblema se calcula exactamente una vez. El árbol exponencial se convierte en una cadena lineal.
@@ -88,14 +88,14 @@ Para Fibonacci, el intercambio es razonable: pasar de O(2^n) a O(n) en tiempo a 
 
 ### Cuándo aplica
 
-La memoización es efectiva cuando se dan dos condiciones simultáneamente:
+La memoización es efectiva cuando se cumplen dos condiciones:
 
 <div align=center>
 
 |Condición|Descripción|
 |-|-|
-|**Subproblemas solapados**|Los mismos subproblemas aparecen múltiples veces|
-|**Subestructura óptima**|La solución de un problema depende de las soluciones de sus subproblemas|
+|**Subproblemas solapados**|Los mismos subproblemas aparecen múltiples veces en el árbol de llamadas|
+|**Determinismo**|El subproblema siempre devuelve el mismo resultado para los mismos argumentos|
 
 </div>
 
@@ -129,5 +129,7 @@ Mismo resultado, mismo coste O(n), sin recursión.
 1. La función `contar(Nodo nodo)` que cuenta los nodos de una lista enlazada, ¿tiene subproblemas solapados? ¿Tiene sentido memoizarla?
 
 2. Si reutilizas el mismo array `cache` para calcular `fib(10)` y luego `fib(8)`, ¿cuántas llamadas hace la segunda? ¿Es eso un problema o una ventaja?
+
+> [Ejemplos prácticos](ejemplos/README.md)
 
 > [Volver al inicio del módulo](../README.md)

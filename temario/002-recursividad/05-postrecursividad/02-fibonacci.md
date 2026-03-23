@@ -1,7 +1,7 @@
 <div align=right>
 
-<sub>[RECURSIVIDAD](/temario/002-recursividad/README.md)  
-[Inducción](/temario/002-recursividad/01-induccion/prePatrones.md) / [Estructuración](/temario/002-recursividad/02-estructuracion/README.md) / [Implementación](/temario/002-recursividad/03-implementacion/README.md) / [Aplicación](/temario/002-recursividad/04-aplicacion/README.md) / [**PostRecursividad**](/temario/002-recursividad/05-postrecursividad/README.md)</sub>  
+<sub>[RECURSIVIDAD](/temario/002-recursividad/README.md)
+[Inducción](/temario/002-recursividad/01-induccion/prePatrones.md) / [Estructuración](/temario/002-recursividad/02-estructuracion/README.md) / [Implementación](/temario/002-recursividad/03-implementacion/README.md) / [Aplicación](/temario/002-recursividad/04-aplicacion/README.md) / [**PostRecursividad**](/temario/002-recursividad/05-postrecursividad/README.md)</sub>
 [Inicio](README.md) / [Coste](01-coste-recursion.md) / [**Fibonacci**](02-fibonacci.md) / [Memoización](03-memoizacion.md)
 
 </div>
@@ -47,215 +47,40 @@ static long fib(int n) {
 
 ## ¿Cómo?
 
-### El árbol de llamadas de fib(10)
+### El árbol de llamadas de fib(5)
 
 ```
-fib(10)
-|-- fib(9)
-|   |-- fib(8)
-|   |   |-- fib(7)
-|   |   |   |-- fib(6)
-|   |   |   |   |-- fib(5)
-|   |   |   |   |   |-- fib(4)
-|   |   |   |   |   |   |-- fib(3)
-|   |   |   |   |   |   |   |-- fib(2)
-|   |   |   |   |   |   |   |   |-- fib(1) -> 1
-|   |   |   |   |   |   |   |   +-- fib(0) -> 0
-|   |   |   |   |   |   |   +-- fib(1) -> 1
-|   |   |   |   |   |   +-- fib(2)
-|   |   |   |   |   |       |-- fib(1) -> 1
-|   |   |   |   |   |       +-- fib(0) -> 0
-|   |   |   |   |   +-- fib(3)
-|   |   |   |   |       |-- fib(2)
-|   |   |   |   |       |   |-- fib(1) -> 1
-|   |   |   |   |       |   +-- fib(0) -> 0
-|   |   |   |   |       +-- fib(1) -> 1
-|   |   |   |   +-- fib(4)
-|   |   |   |       |-- fib(3)
-|   |   |   |       |   |-- fib(2)
-|   |   |   |       |   |   |-- fib(1) -> 1
-|   |   |   |       |   |   +-- fib(0) -> 0
-|   |   |   |       |   +-- fib(1) -> 1
-|   |   |   |       +-- fib(2)
-|   |   |   |           |-- fib(1) -> 1
-|   |   |   |           +-- fib(0) -> 0
-|   |   |   +-- fib(5)
-|   |   |       |-- fib(4)
-|   |   |       |   |-- fib(3)
-|   |   |       |   |   |-- fib(2)
-|   |   |       |   |   |   |-- fib(1) -> 1
-|   |   |       |   |   |   +-- fib(0) -> 0
-|   |   |       |   |   +-- fib(1) -> 1
-|   |   |       |   +-- fib(2)
-|   |   |       |       |-- fib(1) -> 1
-|   |   |       |       +-- fib(0) -> 0
-|   |   |       +-- fib(3)
-|   |   |           |-- fib(2)
-|   |   |           |   |-- fib(1) -> 1
-|   |   |           |   +-- fib(0) -> 0
-|   |   |           +-- fib(1) -> 1
-|   |   +-- fib(6)
-|   |       |-- fib(5)
-|   |       |   |-- fib(4)
-|   |       |   |   |-- fib(3)
-|   |       |   |   |   |-- fib(2)
-|   |       |   |   |   |   |-- fib(1) -> 1
-|   |       |   |   |   |   +-- fib(0) -> 0
-|   |       |   |   |   +-- fib(1) -> 1
-|   |       |   |   +-- fib(2)
-|   |       |   |       |-- fib(1) -> 1
-|   |       |   |       +-- fib(0) -> 0
-|   |       |   +-- fib(3)
-|   |       |       |-- fib(2)
-|   |       |       |   |-- fib(1) -> 1
-|   |       |       |   +-- fib(0) -> 0
-|   |       |       +-- fib(1) -> 1
-|   |       +-- fib(4)
-|   |           |-- fib(3)
-|   |           |   |-- fib(2)
-|   |           |   |   |-- fib(1) -> 1
-|   |           |   |   +-- fib(0) -> 0
-|   |           |   +-- fib(1) -> 1
-|   |           +-- fib(2)
-|   |               |-- fib(1) -> 1
-|   |               +-- fib(0) -> 0
-|   +-- fib(7)
-|       |-- fib(6)
-|       |   |-- fib(5)
-|       |   |   |-- fib(4)
-|       |   |   |   |-- fib(3)
-|       |   |   |   |   |-- fib(2)
-|       |   |   |   |   |   |-- fib(1) -> 1
-|       |   |   |   |   |   +-- fib(0) -> 0
-|       |   |   |   |   +-- fib(1) -> 1
-|       |   |   |   +-- fib(2)
-|       |   |   |       |-- fib(1) -> 1
-|       |   |   |       +-- fib(0) -> 0
-|       |   |   +-- fib(3)
-|       |   |       |-- fib(2)
-|       |   |       |   |-- fib(1) -> 1
-|       |   |       |   +-- fib(0) -> 0
-|       |   |       +-- fib(1) -> 1
-|       |   +-- fib(4)
-|       |       |-- fib(3)
-|       |       |   |-- fib(2)
-|       |       |   |   |-- fib(1) -> 1
-|       |       |   |   +-- fib(0) -> 0
-|       |       |   +-- fib(1) -> 1
-|       |       +-- fib(2)
-|       |           |-- fib(1) -> 1
-|       |           +-- fib(0) -> 0
-|       +-- fib(5)
-|           |-- fib(4)
-|           |   |-- fib(3)
-|           |   |   |-- fib(2)
-|           |   |   |   |-- fib(1) -> 1
-|           |   |   |   +-- fib(0) -> 0
-|           |   |   +-- fib(1) -> 1
-|           |   +-- fib(2)
-|           |       |-- fib(1) -> 1
-|           |       +-- fib(0) -> 0
-|           +-- fib(3)
-|               |-- fib(2)
-|               |   |-- fib(1) -> 1
-|               |   +-- fib(0) -> 0
-|               +-- fib(1) -> 1
-+-- fib(8)
-    |-- fib(7)
-    |   |-- fib(6)
-    |   |   |-- fib(5)
-    |   |   |   |-- fib(4)
-    |   |   |   |   |-- fib(3)
-    |   |   |   |   |   |-- fib(2)
-    |   |   |   |   |   |   |-- fib(1) -> 1
-    |   |   |   |   |   |   +-- fib(0) -> 0
-    |   |   |   |   |   +-- fib(1) -> 1
-    |   |   |   |   +-- fib(2)
-    |   |   |   |       |-- fib(1) -> 1
-    |   |   |   |       +-- fib(0) -> 0
-    |   |   |   +-- fib(3)
-    |   |   |       |-- fib(2)
-    |   |   |       |   |-- fib(1) -> 1
-    |   |   |       |   +-- fib(0) -> 0
-    |   |   |       +-- fib(1) -> 1
-    |   |   +-- fib(4)
-    |   |       |-- fib(3)
-    |   |       |   |-- fib(2)
-    |   |       |   |   |-- fib(1) -> 1
-    |   |       |   |   +-- fib(0) -> 0
-    |   |       |   +-- fib(1) -> 1
-    |   |       +-- fib(2)
-    |   |           |-- fib(1) -> 1
-    |   |           +-- fib(0) -> 0
-    |   +-- fib(5)
-    |       |-- fib(4)
-    |       |   |-- fib(3)
-    |       |   |   |-- fib(2)
-    |       |   |   |   |-- fib(1) -> 1
-    |       |   |   |   +-- fib(0) -> 0
-    |       |   |   +-- fib(1) -> 1
-    |       |   +-- fib(2)
-    |       |       |-- fib(1) -> 1
-    |       |       +-- fib(0) -> 0
-    |       +-- fib(3)
-    |           |-- fib(2)
-    |           |   |-- fib(1) -> 1
-    |           |   +-- fib(0) -> 0
-    |           +-- fib(1) -> 1
-    +-- fib(6)
-        |-- fib(5)
-        |   |-- fib(4)
-        |   |   |-- fib(3)
-        |   |   |   |-- fib(2)
-        |   |   |   |   |-- fib(1) -> 1
-        |   |   |   |   +-- fib(0) -> 0
-        |   |   |   +-- fib(1) -> 1
-        |   |   +-- fib(2)
-        |   |       |-- fib(1) -> 1
-        |   |       +-- fib(0) -> 0
-        |   +-- fib(3)
-        |       |-- fib(2)
-        |       |   |-- fib(1) -> 1
-        |       |   +-- fib(0) -> 0
-        |       +-- fib(1) -> 1
-        +-- fib(4)
-            |-- fib(3)
-            |   |-- fib(2)
-            |   |   |-- fib(1) -> 1
-            |   |   +-- fib(0) -> 0
-            |   +-- fib(1) -> 1
-            +-- fib(2)
-                |-- fib(1) -> 1
-                +-- fib(0) -> 0
-
+fib(5)
+├── fib(4)
+│   ├── fib(3)
+│   │   ├── fib(2)
+│   │   │   ├── fib(1) → 1
+│   │   │   └── fib(0) → 0
+│   │   └── fib(1) → 1
+│   └── fib(2)
+│       ├── fib(1) → 1
+│       └── fib(0) → 0
+└── fib(3)
+    ├── fib(2)
+    │   ├── fib(1) → 1
+    │   └── fib(0) → 0
+    └── fib(1) → 1
 ```
-
-- Total nodos: 177
-- Resultado: **fib(10) = 55**
 
 ### El problema: subproblemas solapados
 
 <div align=center>
 
-|Subproblema|Veces calculado en fib(10)|
+|Subproblema|Veces calculado en fib(5)|
 |-|-|
-|fib(10)|1|
-|fib(9)|1|
-|fib(8)|2|
-|fib(7)|3|
-|fib(6)|5|
-|fib(5)|8|
-|fib(4)|13|
-|fib(3)|21|
-|fib(2)|34|
-|fib(1)|55|
-|fib(0)|34|
+|fib(3)|2|
+|fib(2)|3|
+|fib(1)|5|
+|fib(0)|3|
 
 </div>
 
-||||
-|-|-|-|
-177 llamadas, 11 subproblemas distintos.|La columna de frecuencias es la propia sucesión de Fibonacci (1, 1, 2, 3, 5, 8, 13, 21, 34, 55) con la excepción de fib(0), que rompe el patrón porque solo es invocado desde fib(2).|Fibonacci se computa a sí mismo para computarse.
+`fib(5)` hace **15 llamadas** para calcular un valor que tiene exactamente **6 subproblemas distintos** (fib(0) a fib(5)).
 
 El árbol crece exponencialmente, pero el número de subproblemas distintos crece linealmente. Esa es la contradicción: el problema es lineal en complejidad inherente, pero la implementación ingenua lo resuelve en tiempo exponencial.
 

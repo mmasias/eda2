@@ -1,7 +1,7 @@
 <div align=right>
 
-<sub>[RECURSIVIDAD](/temario/002-recursividad/README.md)  
-[Inducción](/temario/002-recursividad/01-induccion/prePatrones.md) / [Estructuración](/temario/002-recursividad/02-estructuracion/README.md) / [Implementación](/temario/002-recursividad/03-implementacion/README.md) / [Aplicación](/temario/002-recursividad/04-aplicacion/README.md) / [**PostRecursividad**](/temario/002-recursividad/05-postrecursividad/README.md)</sub>  
+<sub>[RECURSIVIDAD](/temario/002-recursividad/README.md)
+[Inducción](/temario/002-recursividad/01-induccion/prePatrones.md) / [Estructuración](/temario/002-recursividad/02-estructuracion/README.md) / [Implementación](/temario/002-recursividad/03-implementacion/README.md) / [Aplicación](/temario/002-recursividad/04-aplicacion/README.md) / [**PostRecursividad**](/temario/002-recursividad/05-postrecursividad/README.md)</sub>
 [Inicio](README.md) / [**Coste**](01-coste-recursion.md) / [Fibonacci](02-fibonacci.md) / [Memoización](03-memoizacion.md)
 
 </div>
@@ -71,14 +71,14 @@ factorial(4)
 ### Recursión ramificada: subconjuntos
 
 ```java
-static void fabricar(int[] nums, int indice, Camino actual) {
+static void fabricar(int[] nums, int indice, List<Integer> actual) {
     if (indice == nums.length) {
         System.out.println(actual);
         return;
     }
-    actual.agregar(nums[indice]);
+    actual.add(nums[indice]);
     fabricar(nums, indice + 1, actual);
-    actual.quitar();
+    actual.remove(actual.size() - 1);
     fabricar(nums, indice + 1, actual);
 }
 ```
@@ -107,21 +107,21 @@ fabricar([1,2,3])
 
 |Profundidad|Ramificación|Nodos totales|Trabajo por nodo|Coste|
 |-|-|-|-|-|
-|n|2|$2^{n+1} − 1$|O(1)|**O($2^n$)**|
+|n|2|2^(n+1) − 1|O(1)|**O(2^n)**|
 
 </div>
 
 ### La relación general
 
-A partir de la fórmula general de nodos totales es la serie geométrica $\sum_{i=0}^{n} k^i = \frac{k^{n+1} - 1}{k - 1}$ podemos calcular un coste para los nodos totales máximos, a una profundidad n y con un número de ramas concreto tenemos:
+La fórmula de nodos totales para un árbol de profundidad n y ramificación k es la serie geométrica: (k^(n+1) − 1) / (k − 1).
 
 <div align=center>
 
 |Ramificación|Profundidad|Nodos totales|Coste|
 |-|-|-|-|
-|1|n|$n + 1$|O(n)|
-|2|n|$2^{n+1} − 1$|O($2^n$)|
-|k|n|$\frac{k^{n+1} - 1}{k - 1}$|O($k^n$)|
+|1|n|n + 1|O(n)|
+|2|n|2^(n+1) − 1|O(2^n)|
+|k|n|(k^(n+1) − 1) / (k − 1)|O(k^n)|
 
 </div>
 
