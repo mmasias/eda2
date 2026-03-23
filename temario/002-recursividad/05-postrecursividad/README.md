@@ -1,8 +1,8 @@
 <div align=right>
 
-<sub>[RECURSIVIDAD](/temario/002-recursividad/README.md)  
-[Inducción](/temario/002-recursividad/01-induccion/prePatrones.md) / [Estructuración](/temario/002-recursividad/02-estructuracion/README.md) / [Implementación](/temario/002-recursividad/03-implementacion/README.md) / [Aplicación](/temario/002-recursividad/04-aplicacion/README.md) / [**PostRecursividad**](/temario/002-recursividad/05-postrecursividad/README.md)</sub>  
-[**Inicio**](README.md) / [Coste](01-coste-recursion.md) / [Fibonacci](02-fibonacci.md) / [Memoización](03-memoizacion.md)
+<sub>[RECURSIVIDAD](/temario/002-recursividad/README.md)<br>
+[Inducción](/temario/002-recursividad/01-induccion/prePatrones.md) / [Estructuración](/temario/002-recursividad/02-estructuracion/README.md) / [Implementación](/temario/002-recursividad/03-implementacion/README.md) / [Aplicación](/temario/002-recursividad/04-aplicacion/README.md) / [**PostRecursividad**](/temario/002-recursividad/05-postrecursividad/README.md)</sub><br>
+[**Inicio**](README.md) / [Coste](01-coste-recursion.md) / [Fibonacci](02-fibonacci.md) / [Memoización](03-memoizacion.md) / [Ejemplos prácticos](ejemplos/README.md)
 
 </div>
 
@@ -34,5 +34,6 @@ Una función puede seguir todos los patrones — caso base, caso recursivo, hace
 |[El coste de la recursión](01-coste-recursion.md)|El árbol de llamadas como herramienta de análisis|
 |[Fibonacci](02-fibonacci.md)|Correcto pero catastrófico: subproblemas solapados|
 |[Memoización](03-memoizacion.md)|Recordar lo que ya calculaste|
+|[Ejemplos prácticos](ejemplos/README.md)|Escaleras y caminos en cuadrícula|
 
 </div>
