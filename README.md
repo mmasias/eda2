@@ -4,7 +4,7 @@
 
 |<sub>**Construir (PRG1/PRG2) → organizar (EDA1) → optimizar (EDA2)**</sub>|
 |-:|
-|<sup>[Algoritmos](temario/001-analisisAlgoritmos/README.md) / [Recursividad](temario/002-recursividad/README.md) / Ordenación / Búsquedas / Hashing / Inmutabilidad</sup>|
+|<sup>[Algoritmos](temario/001-analisisAlgoritmos/README.md) / [Recursividad](temario/002-recursividad/README.md) / Orden y búsqueda / Hashing / Inmutabilidad</sup>|
 
 </div>
 
@@ -62,12 +62,10 @@ Evaluar si un algoritmo es viable para el problema en cuestión. Distinguir entr
 - Bloque instrumental: las herramientas
   - [x] [Análisis de algoritmos](temario/001-analisisAlgoritmos/README.md)
   - [x] [Recursividad](temario/002-recursividad/README.md)
-- Bloque de organización
-  - [ ] [Ordenación](temario/003-ordenacion/README.md)
-- Bloque de recuperación
-  - [ ] [Búsquedas](temario/004-busquedas/README.md)
-  - [ ] [Hashing](temario/005-hashing/README.md)
+- Bloque de acceso eficiente
+  - [ ] [Orden y búsqueda](temario/003-ordenYbusqueda/README.md)
+  - [ ] [Hashing](temario/004-hashing/README.md)
 - Abstracción avanzada
-  - [ ] [Estructuras de datos avanzadas](temario/006-estructurasDatosAvanzadas/README.md)
+  - [ ] [Estructuras de datos avanzadas](temario/005-estructurasDatosAvanzadas/README.md)
 - Paradigmas complementarios
-  - [ ] [Inmutabilidad](temario/007-inmutabilidad/README.md)
+  - [ ] [Inmutabilidad](temario/006-inmutabilidad/README.md)
