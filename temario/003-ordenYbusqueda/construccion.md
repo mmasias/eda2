@@ -67,10 +67,10 @@ Consecuencia directa: si se sabe de antemano que una colección va a ser consult
 
 | Estructura | Inserción | Búsqueda | Por qué |
 |-|-|-|-|
-| [Array sin orden](src/construccion/arraySinOrden/) | O(1) | O(n) | Sin invariante; búsqueda lineal obligatoria |
-| [Lista sin orden](src/construccion/listaSinOrden/) | O(1) | O(n) | Sin invariante; búsqueda lineal obligatoria |
-| [Array ordenado ](src/construccion/arrayConOrden/)| O(n) | O(log n) | Acceso aleatorio: se puede saltar al centro |
-| [Lista ordenada ](src/construccion/listaConOrden/)| O(n) | O(n) | Sin acceso aleatorio: ordenar no basta |
+| [Array sin orden](/src/ordenYbusqueda/construccion/arraySinOrden/) | O(1) | O(n) | Sin invariante; búsqueda lineal obligatoria |
+| [Lista sin orden](/src/ordenYbusqueda/construccion/listaSinOrden/) | O(1) | O(n) | Sin invariante; búsqueda lineal obligatoria |
+| [Array ordenado ](/src/ordenYbusqueda/construccion/arrayConOrden/)| O(n) | O(log n) | Acceso aleatorio: se puede saltar al centro |
+| [Lista ordenada ](/src/ordenYbusqueda/construccion/listaConOrden/)| O(n) | O(n) | Sin acceso aleatorio: ordenar no basta |
 | BST | O(log n) | O(log n) | La estructura es el orden; cada nodo es el centro de su rango |
 
 </div>
