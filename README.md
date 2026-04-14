@@ -4,7 +4,7 @@
 
 |<sub>**Construir (PRG1/PRG2) → organizar (EDA1) → optimizar (EDA2)**</sub>|
 |-:|
-|<sup>[Algoritmos](temario/001-analisisAlgoritmos/README.md) / [Recursividad](temario/002-recursividad/README.md) / Orden y búsqueda / Hashing / Inmutabilidad</sup>|
+|<sup>[Algoritmos](temario/001-analisisAlgoritmos/README.md) / [Recursividad](temario/002-recursividad/README.md) / [Orden y búsqueda](temario/003-ordenYbusqueda/README.md) / Hashing / Inmutabilidad</sup>|
 
 </div>
 
