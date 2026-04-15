@@ -111,7 +111,7 @@ Insertar 1, 2, 3, 4, 5:
                         5
 ```
 
-Las variantes balanceadas (AVL, Red-Black) resuelven este problema añadiendo rotaciones tras cada inserción para mantener la altura en O(log n), garantizando el comportamiento esperado incluso con datos en orden.
+Las variantes balanceadas ([AVL](/src/ordenYbusqueda/construccion/bstBalanceado/), Red-Black) resuelven este problema añadiendo rotaciones tras cada inserción para mantener la altura en O(log n), garantizando el comportamiento esperado incluso con datos en orden.
 
 <div align=center>
 
