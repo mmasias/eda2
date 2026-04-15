@@ -71,7 +71,7 @@ Consecuencia directa: si se sabe de antemano que una colección va a ser consult
 | [Lista sin orden](/src/ordenYbusqueda/construccion/listaSinOrden/) | O(1) | O(n) | Sin invariante; búsqueda lineal obligatoria |
 | [Array ordenado ](/src/ordenYbusqueda/construccion/arrayConOrden/)| O(n) | O(log n) | Acceso aleatorio: se puede saltar al centro |
 | [Lista ordenada ](/src/ordenYbusqueda/construccion/listaConOrden/)| O(n) | O(n) | Sin acceso aleatorio: ordenar no basta |
-| [BST](src/construccion/bst/) | O(log n) | O(log n) | La estructura es el orden; cada nodo es el centro de su rango |
+| [BST](/src/ordenYbusqueda/construccion/bst/) | O(log n) | O(log n) | La estructura es el orden; cada nodo es el centro de su rango |
 
 </div>
 
