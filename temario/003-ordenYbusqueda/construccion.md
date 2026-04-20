@@ -1,3 +1,10 @@
+<div align=right>
+
+<sub>[ORDEN Y BÚSQUEDA](README.md)  
+[Construcción](construccion.md) / [Búsquedas](busqueda/README.md) / [Ordenación]() / [Índice externo]()</sub>
+
+</div>
+
 # Construcción [con orden]
 
 ## ¿Por qué?

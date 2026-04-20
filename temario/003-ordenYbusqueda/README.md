@@ -1,3 +1,10 @@
+<div align=right>
+
+<sub>[**ORDEN Y BÚSQUEDA**](README.md)  
+[Construcción](construccion.md) / [Búsquedas](busqueda/README.md) / [Ordenación]() / [Índice externo]()</sub>  
+
+</div>
+
 # Orden y búsqueda
 
 ## ¿Por qué?
@@ -30,7 +37,7 @@ Presentados en cadena causal, cada concepto justifica el siguiente y es justific
 
 | | |
 |-|-|
-| [Construcción](construccion.md) | Orden como invariante de diseño. Inserción ordenada, BST. Coste de construir ordenado frente a ordenar después. |
-| [Búsqueda](busqueda/README.md) | Lineal: O(n), sin precondiciones. Binaria: O(log n), exige orden. La comparación entre ambas es la motivación de todo lo demás. |
+| [**Construcción**](construccion.md) | Orden como invariante de diseño. Inserción ordenada, BST. Coste de construir ordenado frente a ordenar después. |
+| [**Búsqueda**](busqueda/README.md) | Lineal: O(n), sin precondiciones. Binaria: O(log n), exige orden. La comparación entre ambas es la motivación de todo lo demás. |
 | [Ordenación](ordenacion/README.md) | Algoritmos clásicos y no comparativos. Su lugar en la cadena: coste que se amortiza con búsquedas posteriores. |
 | [Índice externo](indiceExterno.md) | Separar clave de dato. Preludio a B-trees, índices invertidos, bases de datos. |
