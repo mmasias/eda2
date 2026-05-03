@@ -1,7 +1,7 @@
 <div align=right>
 
 <sub>[ORDEN Y BÚSQUEDA](../README.md)  
-[Construcción](../construccion.md) / [**Búsquedas**](../busqueda/README.md) / [Ordenación]() / [Índice externo]()  </sub>  
+[Construcción](../construccion.md) / [**Búsquedas**](../busqueda/README.md) / [Ordenación](../ordenacion/README.md) / [Índice externo](../indiceExterno.md)  </sub>  
 [Búsqueda lineal](lineal.md) / [**Búsqueda binaria**](binaria.md) / [Búsqueda en BST](bst.md)
 
 </div>

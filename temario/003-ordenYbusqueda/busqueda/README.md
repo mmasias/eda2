@@ -1,7 +1,7 @@
 <div align=right>
 
 <sub>[ORDEN Y BÚSQUEDA](../README.md)  
-[Construcción](../construccion.md) / [**Búsquedas**](../busqueda/README.md) / [Ordenación]() / [Índice externo]()  </sub>  
+[Construcción](../construccion.md) / [**Búsquedas**](../busqueda/README.md) / [Ordenación](../ordenacion/README.md) / [Índice externo](../indiceExterno.md)  </sub>  
 [Búsqueda lineal](lineal.md) / [Búsqueda binaria](binaria.md) / [Búsqueda en BST](bst.md)
 
 </div>
@@ -86,7 +86,7 @@ Comprobar si una colección está ordenada requiere recorrerla: O(n). Si se real
 
 #### El conocimiento del dominio no es opcional
 
-Un programador que elige su estrategia de búsqueda sin entender la naturaleza de sus datos está eligiendo en el vacío. El análisis de complejidad describe el comportamiento del algoritmo; no responde si ese algoritmo es el adecuado para esos datos concretos. Esa pregunta requiere respuesta antes de escribir código, y su respuesta está en el problema, no en la librería.
+Un programador que elige su estrategia de búsqueda sin entender la naturaleza de sus datos está eligiendo en el vacío. El análisis de complejidad describe el comportamiento del algoritmo; no responde si ese algoritmo es el adecuado para esos datos concretos. Esa pregunta requiere respuesta antes de escribir código y su respuesta está en el problema, no en la librería.
 
 ### La pregunta que lleva a ordenación
 

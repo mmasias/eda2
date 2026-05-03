@@ -2,7 +2,7 @@
 
 <sub>[ORDEN Y BÚSQUEDA](../README.md)  
 [Construcción](../construccion.md) / [Búsquedas](../busqueda/README.md) / [**Ordenación**](README.md) / [Índice externo](../indiceExterno.md)  
-[Comparativa](comparativa.md) / [Insertion sort](insertionSort.md) / [Merge sort](mergeSort.md) / [Quicksort](quickSort.md) / [Con conocimiento](conConocimiento.md) / [Counting sort](countingSort.md) / [Radix sort](radixSort.md) / [Límite inferior](limiteInferior.md)</sub>
+[Por comparación](porComparacion.md) / [Insertion sort](insertionSort.md) / [Merge sort](mergeSort.md) / [Quicksort](quickSort.md) / [Comparativa](comparativa.md) / [Con conocimiento](conConocimiento.md) / [Counting sort](countingSort.md) / [Radix sort](radixSort.md) / [Límite inferior](limiteInferior.md)</sub>
 
 </div>
 
@@ -52,7 +52,7 @@ La pregunta organizadora es la misma que en búsqueda: **¿qué sé de mis datos
 
 | Conocimiento disponible | Estrategia | Complejidad | |
 |-|-|:-:|-|
-| Solo puedo comparar elementos | [Ordenación por comparación](comparativa.md) | O(n log n) | Insertion sort, merge sort, quicksort |
+| Solo puedo comparar elementos | [Ordenación por comparación](porComparacion.md) | O(n log n) | Insertion sort, merge sort, quicksort |
 | Conozco el rango o la estructura de los valores | [Ordenación con conocimiento](conConocimiento.md) | O(n) | Counting sort, radix sort |
 
 </div>

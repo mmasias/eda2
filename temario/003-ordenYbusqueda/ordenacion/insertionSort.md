@@ -2,7 +2,7 @@
 
 <sub>[ORDEN Y BÚSQUEDA](../README.md)  
 [Construcción](../construccion.md) / [Búsquedas](../busqueda/README.md) / [**Ordenación**](README.md) / [Índice externo](../indiceExterno.md)  
-[Comparativa](comparativa.md) / [**Insertion sort**](insertionSort.md) / [Merge sort](mergeSort.md) / [Quicksort](quickSort.md) / [Con conocimiento](conConocimiento.md) / [Counting sort](countingSort.md) / [Radix sort](radixSort.md) / [Límite inferior](limiteInferior.md)</sub>
+[Por comparación](porComparacion.md) / [**Insertion sort**](insertionSort.md) / [Merge sort](mergeSort.md) / [Quicksort](quickSort.md) / [Comparativa](comparativa.md) / [Con conocimiento](conConocimiento.md) / [Counting sort](countingSort.md) / [Radix sort](radixSort.md) / [Límite inferior](limiteInferior.md)</sub>
 
 </div>
 
